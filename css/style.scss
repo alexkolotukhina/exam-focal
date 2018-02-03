@@ -95,12 +95,14 @@ a {
 	background-size: cover;
 	height: 100vh;
 	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	text-align: center;
+	flex-direction: column;
 
 	&__top {
-		height: 92%;
+		display: flex;
+		flex-grow: 1;
+	    flex-direction: column;
+	    justify-content: center;
+	    align-items: center;
 	}
 
 	&__title {
@@ -113,28 +115,17 @@ a {
 		border-top: 2px solid #fff;
 		border-bottom: 2px solid #fff;
 		margin-bottom: 50px;
-		margin-top: 40vh;
-
 	}
 
 	&__bottom {
 		background: #252e30;
-		height: 70px;
-		display: flex;
-		width: 100%;
-		display: flex;
-		flex-wrap: nowrap;
-		align-items: center;
-		justify-content: space-between;
-
 	}
 
 	&__nav {
 		display: flex;
-		width: 1200px;
-		margin: 0 auto;
 		justify-content: space-between;
-
+		align-items: center;
+    	padding: 15px 0;
 	}
 }
 .ba-logo:hover {
@@ -150,11 +141,11 @@ a {
 	width: 42px;
 	display: inline-block;
 	background: #4b5456;
-
-
+	text-align: center;
 }
 .ba-logo2 {
 	font-size: 30px;
+	margin-left: 10px;
 	color: #fff;
 	text-transform: uppercase;
 	line-height: 42px;
@@ -236,6 +227,9 @@ a {
 	&__item:first-child {
 		padding-right: 50px;
 	}
+	&__item:last-child {
+		padding-left: 50px;
+	}
 	&__text {
 		margin-bottom: 30px;
 	}
@@ -251,10 +245,7 @@ a {
 
 }
 .ba-line {
-	width: 100%;
-	height: 30px;
 	background: #f2f2f1;
-	position: relative;
 
 	&--green {
 		background: #2ecc71;
@@ -263,10 +254,6 @@ a {
 		color: #fff;
 		padding-right: 10px;
 		text-align: right;
-		position: absolute;
-		top: 0;
-		left: 0;
-		z-index: 99;
 	}
 
 	&--width1 {
@@ -300,6 +287,7 @@ a {
 		min-height: 300px;
 		margin-bottom: 40px;
 		position: relative;
+		font-size: 0;
 
 		&:hover {
 			img {
@@ -317,6 +305,7 @@ a {
 		&:first-child {
 			padding: 35px 30px 0;
 			background-color: #252e30;
+			font-size: 18px;
 		}
 
 		&-title {
